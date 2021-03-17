@@ -1,0 +1,67 @@
+[
+  {
+    "id": "3da8c6cc.1c053a",
+    "type": "tab",
+    "label": "Simple Example",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "b2484e9c.76f3e",
+    "type": "simplex",
+    "z": "3da8c6cc.1c053a",
+    "name": "",
+    "x": 460,
+    "y": 360,
+    "wires": [
+      [
+        "76f05337.abe844"
+      ]
+    ]
+  },
+  {
+    "id": "6d60de57.3aa738",
+    "type": "inject",
+    "z": "3da8c6cc.1c053a",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "1",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 310,
+    "y": 360,
+    "wires": [
+      [
+        "b2484e9c.76f3e"
+      ]
+    ]
+  },
+  {
+    "id": "76f05337.abe844",
+    "type": "debug",
+    "z": "3da8c6cc.1c053a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 630,
+    "y": 360,
+    "wires": []
+  }
+]

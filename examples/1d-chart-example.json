@@ -1,0 +1,156 @@
+[
+  {
+    "id": "d1b5d918.b9a998",
+    "type": "tab",
+    "label": "1D Chart Example",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "c7d9ae0b.f2b338",
+    "type": "inject",
+    "z": "d1b5d918.b9a998",
+    "name": "",
+    "props": [],
+    "repeat": "1",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 140,
+    "y": 380,
+    "wires": [
+      [
+        "72aead3c.febf34"
+      ]
+    ]
+  },
+  {
+    "id": "72aead3c.febf34",
+    "type": "change",
+    "z": "d1b5d918.b9a998",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "counter",
+        "pt": "flow",
+        "to": "($flowContext(\"counter\") ? $flowContext(\"counter\") : 0) + 0.1\t",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "counter",
+        "tot": "flow"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 350,
+    "y": 380,
+    "wires": [
+      [
+        "ee1632c0.3003c"
+      ]
+    ]
+  },
+  {
+    "id": "ee1632c0.3003c",
+    "type": "simplex",
+    "z": "d1b5d918.b9a998",
+    "name": "",
+    "x": 540,
+    "y": 380,
+    "wires": [
+      [
+        "7429f02f.6e74b"
+      ]
+    ]
+  },
+  {
+    "id": "e22b39c9.f9f978",
+    "type": "ui_chart",
+    "z": "d1b5d918.b9a998",
+    "name": "",
+    "group": "ec13fb43.5179d8",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "label": "chart",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 890,
+    "y": 380,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "7429f02f.6e74b",
+    "type": "range",
+    "z": "d1b5d918.b9a998",
+    "minin": "-1",
+    "maxin": "1",
+    "minout": "10",
+    "maxout": "25",
+    "action": "scale",
+    "round": false,
+    "property": "payload",
+    "name": "",
+    "x": 720,
+    "y": 380,
+    "wires": [
+      [
+        "e22b39c9.f9f978"
+      ]
+    ]
+  },
+  {
+    "id": "ec13fb43.5179d8",
+    "type": "ui_group",
+    "name": "Default",
+    "tab": "5f97cc7.d567a34",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "5f97cc7.d567a34",
+    "type": "ui_tab",
+    "name": "Home",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  }
+]
