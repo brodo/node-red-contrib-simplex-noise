@@ -5,7 +5,7 @@
       "simplex": "simplex.js"
     }
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A node-red node for generating simplex noise",
   "main": "simplex.js",
   "scripts": {
@@ -20,7 +20,8 @@
     "simplex",
     "perlin",
     "node-red",
-    "iot"
+    "iot",
+    "random"
   ],
   "author": "Julian Dax",
   "license": "Apache-2.0",
